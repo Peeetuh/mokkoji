@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,6 +15,14 @@ import logo from "../src/assets/mokkoji-logo.jpg";
 function App() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isLogoHovered, setIsLogoHovered] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    // Check if device is touch capable
+    const touchSupported =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+    setIsTouchDevice(touchSupported);
+  }, []);
 
   const logoStyle = {
     width: "300px",
@@ -69,8 +77,13 @@ function App() {
               key={link.name}
               to={link.path}
               style={linkStyle(isActive, hoveredIndex === idx)}
-              onMouseEnter={() => setHoveredIndex(idx)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              // Only add hover handlers if NOT touch device
+              {...(!isTouchDevice
+                ? {
+                    onMouseEnter: () => setHoveredIndex(idx),
+                    onMouseLeave: () => setHoveredIndex(null),
+                  }
+                : {})}
             >
               {link.name}
             </Link>
@@ -86,13 +99,12 @@ function App() {
 
       <Router>
         <header
-  style={{
-    backgroundColor: "white",
-    // padding: "10px 20px", // reduced padding
-    color: "white",
-    textAlign: "center",
-  }}
->
+          style={{
+            backgroundColor: "white",
+            color: "white",
+            textAlign: "center",
+          }}
+        >
           <h1>
             <img
               src={logo}

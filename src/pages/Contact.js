@@ -2,7 +2,8 @@ import React from "react";
 
 const Contact = () => {
   const containerStyle = {
-    width: "700px",
+    maxWidth: "700px",
+    width: "90%",
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: "20px",
@@ -13,6 +14,7 @@ const Contact = () => {
     textAlign: "center",
     color: "#333",
     lineHeight: 1.6,
+    boxSizing: "border-box",
   };
 
   const headingStyle = {
@@ -41,11 +43,12 @@ const Contact = () => {
   return (
     <div
       style={{
-        height: "60vh",
+        minHeight: "calc(100vh - 80px)", // full viewport minus header/footer height approx
         width: "100vw",
         backgroundColor: "#fff8f0",
         position: "relative",
-        padding: '5px'
+        padding: "10px 5px 40px",  // bottom padding so content isn’t too close to footer
+        boxSizing: "border-box",
       }}
     >
       <div style={containerStyle}>

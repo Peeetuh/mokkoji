@@ -1,31 +1,30 @@
 import React from "react";
 
 const About = () => {
-  // const boxHeight = 400; // approximate height in px, adjust if needed
-
   return (
     <div
       style={{
-        height: "100vh",
+        minHeight: "100vh",
         width: "100vw",
-        display: "block",
         position: "relative",
         backgroundColor: "#fff8f0",
-        padding: "10px"
+        padding: "10px",
+        boxSizing: "border-box",
       }}
     >
       <div
         style={{
-            width: "600px",
-            margin: "auto",
-            padding: "30px",
-            backgroundColor: "white",
-            boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
-            borderRadius: "10px",
-            marginTop: "20px",  // <-- smaller margin to bring it up
-            textAlign: "center",
-            color: "#333",
-            lineHeight: 1.6,
+          maxWidth: "600px",    // max width for big screens
+          width: "90%",         // responsive width on smaller screens
+          margin: "20px auto 0",  // margin top 20px and centered horizontally
+          padding: "30px",
+          backgroundColor: "white",
+          boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+          borderRadius: "10px",
+          textAlign: "center",
+          color: "#333",
+          lineHeight: 1.6,
+          boxSizing: "border-box",
         }}
       >
         <h2 style={{ color: "#c94f4f", fontSize: "2.2rem", marginBottom: 20 }}>

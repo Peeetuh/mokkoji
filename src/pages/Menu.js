@@ -6,28 +6,24 @@ const Menu = () => {
   const containerStyle = {
     width: "90%",
     maxWidth: "700px",
-    margin: "80px auto 40px",
+    margin: "40px auto 40px",  // less top margin than before
     padding: "20px",
     backgroundColor: "white",
     borderRadius: "10px",
     boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
     color: "#333",
     textAlign: "center",
+    boxSizing: "border-box",
   };
 
-  // const headingStyle = {
-  //   color: "#D10000",
-  //   fontSize: "2.2rem",
-  //   marginBottom: "30px",
-  // };
-
   const imageContainerStyle = {
-    width: "400px",       // fixed width for image wrapper
-    margin: "0 auto 40px", // centers container horizontally + margin bottom
+    maxWidth: "400px",
+    width: "100%", // fill container width responsively
+    margin: "0 auto 40px",
   };
 
   const imgStyle = {
-    width: "100%",       // fills container width exactly
+    width: "100%",
     height: "auto",
     borderRadius: "8px",
     boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
@@ -35,15 +31,17 @@ const Menu = () => {
   };
 
   return (
-    <div style={{
-    backgroundColor: "#fff8f0",
-    minHeight: "80vh",
-    padding: "10px",
-    width: "100vw",          // ensure it spans full viewport width
-    boxSizing: "border-box", // include padding in width
-  }}>
+    <div
+      style={{
+        backgroundColor: "#fff8f0",
+        minHeight: "calc(100vh - 80px)", // fill viewport minus header/footer approx
+        padding: "10px 5px 40px",       // bottom padding for spacing from footer
+        width: "100vw",
+        boxSizing: "border-box",
+      }}
+    >
       <div style={containerStyle}>
-        {/* <h2 style={headingStyle}>Our Menu</h2> */}
+        {/* <h2 style={{color: "#D10000", fontSize: "2.2rem", marginBottom: "30px"}}>Our Menu</h2> */}
 
         <div style={imageContainerStyle}>
           <img src={foodMenu} alt="Mokkoji Food Menu" style={imgStyle} />
