@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 import logo from "../src/assets/mokkoji-logo.jpg";
+import './pages/NavLinks.css';
 
 function App() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
