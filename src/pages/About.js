@@ -41,7 +41,7 @@ const About = () => {
           We aim to introduce the joy of shabu shabu to new audiences by staying true to the traditional Japanese roots with additional influences from Korean, Spanish, and Californian cuisine.
         </p>
 
-        <h3 style={{ color: "#c94f4f", marginTop: 30, fontSize: "1.4rem" }}>
+        <h3 style={{ color: "#c94f4f", marginTop: 30, fontSize: "2.2rem" }}>
           What Makes Us Special
         </h3>
         <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
@@ -51,11 +51,11 @@ const About = () => {
           <li>Friendly service that treats you like family</li>
         </ul>
 
-        <h3 style={{ color: "#c94f4f", marginTop: 30, fontSize: "1.4rem" }}>
+        <h3 style={{ color: "#c94f4f", marginTop: 30, fontSize: "2.2rem" }}>
           Our Promise
         </h3>
         <p>
-          Whether it’s your first visit or your fiftieth, we want Mokkoji to feel
+          Whether it’s your first visit or one of many, we want Mokkoji to feel
           like your go-to gathering place. A spot where great food meets great
           company — every single time.
         </p>
