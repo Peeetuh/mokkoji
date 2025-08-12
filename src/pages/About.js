@@ -1,7 +1,7 @@
 import React from "react";
 
 const About = () => {
-  const boxHeight = 400; // approximate height in px, adjust if needed
+  // const boxHeight = 400; // approximate height in px, adjust if needed
 
   return (
     <div

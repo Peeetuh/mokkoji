@@ -15,11 +15,11 @@ const Menu = () => {
     textAlign: "center",
   };
 
-  const headingStyle = {
-    color: "#D10000",
-    fontSize: "2.2rem",
-    marginBottom: "30px",
-  };
+  // const headingStyle = {
+  //   color: "#D10000",
+  //   fontSize: "2.2rem",
+  //   marginBottom: "30px",
+  // };
 
   const imageContainerStyle = {
     width: "400px",       // fixed width for image wrapper
