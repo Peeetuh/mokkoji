@@ -57,7 +57,7 @@ const About = () => {
         <p>
           Whether it’s your first visit or one of many, we want Mokkoji to feel
           like your go-to gathering place. A spot where great food meets great
-          company — every single time.
+          company every single time.
         </p>
       </div>
     </div>
