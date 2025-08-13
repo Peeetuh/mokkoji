@@ -1,5 +1,11 @@
 import React from "react";
 
+//  const headingStyle = {
+//     color: "#c94f4f",
+//     fontSize: "2.2rem",
+//     marginBottom: "20px",
+//   };
+
 const About = () => {
   return (
     <div
@@ -27,9 +33,15 @@ const About = () => {
           boxSizing: "border-box",
         }}
       >
-        <h2 style={{ color: "#c94f4f", fontSize: "2.2rem", marginBottom: 20 }}>
-          About Us
-        </h2>
+      <h1
+  style={{
+    color: "#c94f4f",
+    fontSize: "2.2rem",
+    marginBottom: "20px",
+  }}
+>
+  About Us
+</h1>
         <p>
           Founded in 2012, <strong>Mokkoji</strong> was born out of a passion for
           bringing people together over delicious food. Our name comes from the

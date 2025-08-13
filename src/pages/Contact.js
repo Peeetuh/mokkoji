@@ -52,7 +52,7 @@ const Contact = () => {
       }}
     >
       <div style={containerStyle}>
-        <h2 style={headingStyle}>Contact Us</h2>
+        <h1 style={headingStyle}>Contact Us</h1>
 
         <p style={infoStyle}>
           <strong>Address:</strong> 19500 W Plummer St, Northridge, California
