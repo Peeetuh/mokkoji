@@ -12,6 +12,7 @@ import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 import logo from "../src/assets/mokkoji-logo.jpg";
 import './pages/NavLinks.css';
+import yelpLogo from "./assets/yelp_logo.png";
 
 function App() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -129,52 +130,85 @@ function App() {
         </main>
 
         <footer
-          style={{
-            backgroundColor: "white",
-            color: "black",
-            textAlign: "center",
-            padding: "15px 10px",
-            fontSize: "14px",
-          }}
-        >
-          <p>Mokkoji Shabu Shabu Northridge</p>
-          <p>19500 W Plummer St, Northridge, California</p>
-          <p>Phone: (123) 456-7890 | Email: mokkojinorthridge@gmail.com</p>
+  style={{
+    backgroundColor: "white",
+    color: "black",
+    textAlign: "center",
+    padding: "15px 10px",
+    fontSize: "14px",
+  }}
+>
+  <p>Mokkoji Shabu Shabu Northridge</p>
+  <p>19500 W Plummer St, Northridge, California</p>
 
-          <a
-            href="https://www.instagram.com/mokkojinorthridge"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              color: "black",
-              textDecoration: "none",
-              marginTop: "10px",
-              fontWeight: "600",
-              justifyContent: "center",
-              gap: "6px",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-              fill="black"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.5 1.5a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z" />
-            </svg>
-            Instagram
-          </a>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "20px",
+      marginTop: "10px",
+    }}
+  >
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/mokkojinorthridge"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        color: "black",
+        textDecoration: "none",
+        fontWeight: "600",
+        gap: "6px",
+      }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="15"
+        height="15"
+        fill="black"
+      >
+        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.5 1.5a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z" />
+      </svg>
+      Instagram
+    </a>
 
-          <p style={{ marginTop: "15px", fontSize: "12px", color: "#666" }}>
-            &copy; {new Date().getFullYear()} Mokkoji. All rights reserved.
-          </p>
-        </footer>
+    {/* Yelp */}
+   <a
+  href="https://www.yelp.com/biz/mokkojinorthridge"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Yelp"
+  style={{
+    display: "inline-flex",
+    alignItems: "center",
+    color: "black",
+    textDecoration: "none",
+    fontWeight: "600",
+    gap: "6px",
+  }}
+>
+  <img
+    src={yelpLogo}
+    alt="Yelp Logo"
+    style={{
+      width: "50px",
+      height: "50px",
+      objectFit: "contain",
+    }}
+  />
+  {/* Yelp */}
+</a>
+  </div>
+
+  <p style={{ marginTop: "15px", fontSize: "12px", color: "#666" }}>
+    &copy; {new Date().getFullYear()} Mokkoji. All rights reserved.
+  </p>
+</footer>
       </Router>
     </>
   );
